@@ -166,7 +166,6 @@ func formatPrometheusData(status Status) string {
         fmt.Fprintf(&sb, "tailscale_peer_cur_addr{id=\"%s\"} %s\n", peer.HostName,  ConvertToString(peer.CurAddr))
         fmt.Fprintf(&sb, "tailscale_peer_rx_bytes{id=\"%s\"} %s\n", peer.HostName,  ConvertToString(peer.RxBytes))
         fmt.Fprintf(&sb, "tailscale_peer_tx_bytes{id=\"%s\"} %s\n", peer.HostName,  ConvertToString(peer.TxBytes))
-        fmt.Fprintf(&sb, "tailscale_peer_cur_addr{id=\"%s\"} %s\n", peer.HostName,  ConvertToString(peer.CurAddr))
         fmt.Fprintf(&sb, "tailscale_peer_relay{id=\"%s\"} %s\n", peer.HostName,  ConvertToString(peer.Relay))
         fmt.Fprintf(&sb, "tailscale_peer_direct{id=\"%s\"} %s\n", peer.HostName, ConvertToString(peer.CurAddr != ""))
         fmt.Fprintf(&sb, "tailscale_peer_online{id=\"%s\"} %s\n", peer.HostName,  ConvertToString(peer.Online))
